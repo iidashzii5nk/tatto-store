@@ -1,0 +1,202 @@
+.ctn-cir-pri{
+	margin-top: 17px;
+	width: 100%;
+    display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex; 
+	justify-content: space-around;
+
+}
+.ctn-cir-sec{
+	display: flex;
+	flex-wrap: wrap;
+    width: 21%;
+	border: 1px solid #bdbdbd;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
+	justify-content: center;
+}
+.ctn-cir-ter{
+	display: flex;/*Para el texto que se acomode abajo*/
+	flex-wrap: wrap;
+    width: 21%;
+	border: 1px solid #bdbdbd;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
+	margin-left: -30%;
+    display: flex;
+	justify-content: center;
+}
+.ctn-cir-cua{
+	display: flex;
+	flex-wrap: wrap;
+    width: 21%;
+	margin-left: -30%;
+	display: flex;
+	justify-content: center;
+}
+.ctn-circle{
+    width: 100px;
+	height:100px;
+	border-radius:100px;
+	background:#ffbb33;
+}
+.ctn-circle:hover{
+	background: black;
+}
+.ctn-ltr-1{
+	margin-top: 10px;
+	width: 100%;
+}
+.ctn-ltr-2{
+	margin-top: 10px;
+	width: 100%;
+}
+.ctn-ltr-3{
+	margin-top: 10px;
+	width: 100%;
+}
+.icon-pencil{
+	padding: 35px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	color:black;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+.icon-pencil:hover{
+	color:#ffbb33;
+}
+.iconkit {
+    padding: 35px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	color:black;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+.iconkit:hover{
+	color:#ffbb33;
+}
+.icon-heart{
+    padding: 35px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	color:black;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+.icon-heart:hover{
+	color:#ffbb33;
+}
+.ltr-circulo{
+	font-family: sans-serif;
+	font-size: 23px;
+	text-align: center;
+}
+.ltr-circulo:hover{
+color: #FF8800;
+cursor: pointer;
+}
+.ltr-abajo{
+font-size: 15px;
+text-align: center;
+font-weight:normal;
+color: #757575;
+}
+.ltr-abajo:hover{
+    color: #FF8800;
+    cursor: pointer;
+}
+.ltr-circulo-2{
+    font-family: sans-serif;
+	font-size: 23px;
+	text-align: center;
+}
+.ltr-circulo-2:hover{
+color: #FF8800;
+cursor: pointer;
+}
+.ltr-abajo-2{
+font-size: 15px;
+text-align: center;
+font-weight:normal;
+color: #757575;
+}
+.ltr-abajo-2:hover{
+	color: #FF8800;
+cursor: pointer;
+
+}
+.ltr-circulo-3{
+	font-family: sans-serif;
+	font-size: 23px;
+	text-align: center;
+}
+.ltr-circulo-3:hover{
+	color: #FF8800;
+    cursor: pointer;
+}
+.ltr-abajo-3{
+font-size: 15px;
+text-align: center;
+font-weight:normal;
+color: #757575;
+}
+.ltr-abajo-3:hover{
+	color: #FF8800;
+    cursor: pointer;
+}
+
+/*Mediaquery de los circulos*/
+@media (max-width:770px) {
+	
+.ctn-cir-pri{
+	margin-top: 17px;
+	margin-left: 12px;
+	width: 95%;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.ctn-cir-sec{
+	display: flex;
+	flex-wrap: wrap;
+    width: 100%;
+	border-bottom: 1px solid #bdbdbd;
+	border-right: none;
+    border-left: none;
+	justify-content: center;
+	padding:20px;
+}
+.ctn-cir-ter{
+	display: flex;/*Para el texto que se acomode abajo*/
+	flex-wrap: wrap;
+    width: 100%;
+	border: 1px solid #bdbdbd;
+	border-right: none;
+	border-left: none;
+	margin: 0;
+	justify-content: center;
+	padding:20px;
+}
+.ctn-cir-cua{
+	display: flex;
+	flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    border-right: none;
+    border-left: none;
+	margin: 0;
+	justify-content: center;
+	padding:20px;
+}
+}

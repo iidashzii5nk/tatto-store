@@ -1,0 +1,29 @@
+.ctn-slider{
+	width: 100%;	
+	overflow: hidden;	
+}
+
+.ctn-slider ul{
+	display: flex;
+	padding:0;
+	animation: cambio 10s infinite;
+    width: 300%;
+}
+.ctn-slider li{
+width: 100%;
+list-style: none;
+}
+.ctn-slider img{
+width: 100%;
+}
+
+@keyframes cambio{
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+
+	35%{margin-left: -100%;}
+	55%{margin-left: -100%;}
+
+	80%{margin-left: -200%;}
+	100%{margin-left: -200%;}
+}

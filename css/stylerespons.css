@@ -1,0 +1,99 @@
+.conten-respons{
+	display: none;
+}
+#inputSearch{
+	display: none;
+}
+
+#ctn-icon-search{
+	display: none;
+}
+#icon-cancel{
+	display: none;
+}
+/*Mediaquery del menu respons*/
+@media (max-width:1410px) {
+
+.conten-respons{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	display: -webkit-flex;
+
+	display: flex; 
+	justify-content: center;
+	justify-content: space-around;
+}
+.cont-respons-logo{
+    margin-top: -9px;
+	text-align: center;
+	font-size:30px;
+	padding: auto;
+}
+
+#ctn-icon-search{
+	display: block;
+    margin-top: -5.5px;
+    margin-left: 39px;
+}
+#ctn-icon-cancel{
+	display: block;
+    margin-top: -5.5px;
+    margin-left: 25px;
+}
+
+#ctn-bars-search{
+	position: fixed;
+	top: -10px;
+	width: 100%;
+	background: #000;
+	height: 60px;
+	padding: 9px;
+	z-index: 9;
+	transition: all 600ms;
+}
+#ctn-bars-search input{
+display: block;
+width: 100%;
+height: 30px;
+margin: auto;
+color: black;
+font-size: 15px;
+font-style: inherit;
+outline: 0;
+
+}
+
+.icon-cancel{
+color: #9e9e9e;
+cursor: pointer;
+transition: all 3000ms;
+font-size:29px;
+margin-top: -1px;
+}
+.cont-car-respons{
+	margin-top: -5px;
+	text-align: center;
+	font-size:30px;
+	padding: auto;
+}
+
+.logo-tattoo{
+	cursor: pointer;
+	width: 100%;
+	height: 52px;
+}
+.icon-basket{
+	cursor: pointer;
+	display: block;
+	color: #9e9e9e;
+	font-size: 27px;
+}
+.icon-search{
+color: #9e9e9e;
+cursor: pointer;
+font-size:27px;
+cursor: pointer;
+	}
+
+}

@@ -1,0 +1,313 @@
+.ctn-fomulario{
+	display: flex;
+	justify-content: center;
+    width: 100%;
+    height: 800px;
+    background: #eeeeee;
+    border-top:1px solid #bdbdbd;
+    border-bottom:1px solid #bdbdbd;
+    border-right: none;
+    border-left: none;
+}
+.ctn-form{
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+}
+.formulario{
+	width: 100%;
+	list-style: none;
+	padding: 0px 30px 0px 0px;
+}
+.formulario ul{
+	list-style: none;
+}
+.formulario ul li h4{
+	color: #616161;
+	padding: 10px 0px 10px;
+	font-weight: normal;
+}
+.formulario ul ul h5{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color:#616161;
+    font-weight: normal;
+}
+.formulario ul ul{
+	padding: 10px;
+}
+.formulario ul ul li i{
+	color: #616161;
+}
+.formulario ul ul li  h3{
+
+	margin-top: -17px;
+	margin-left: 23px;
+	font-weight: normal;
+	font-size: 15px;
+	color:#616161;
+}
+.formulario ul ul li h2{
+	font-weight: normal;
+	font-size: 15px;
+	color:#616161;
+}
+.formulario ul ul h6{
+	line-height: 80px; 
+	font-size: 14px;
+	color: #616161;
+	margin-left:-10px;
+}
+.formulario ul ul li{
+	padding: 10px;
+    margin-left: -10px;
+    border-top:1px solid #9e9e9e; 
+    width: 110%;
+}
+.formulario ul ul a{
+	color: #616161;
+	text-decoration:none;
+}
+.formulario ul ul .rig{
+	position: absolute;
+    margin-left: -10px;
+    margin-top: 3px;
+	font-size: 10px;
+}
+.formulario ul ul form input{
+	width: 94%;
+}
+.formulario ul ul .face, .insta, .you, .twit{
+	font-size: 33px;
+	cursor: pointer;
+}
+.formulario ul ul .face:hover{
+	color: #0d47a1;
+}
+.formulario ul ul .insta:hover{
+	color: #c51162;
+}
+.formulario ul ul .you:hover{
+	color: #CC0000;
+}
+.formulario ul ul .twit:hover{
+	color: #33b5e5;
+}
+/*STYLE  MEDIOS DE PAGO*/
+.pagcredit{
+	display: flex;
+	justify-content:center;
+    width: 100%;
+}
+.ctn-cp{
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+}
+.devpagos{
+	width: 100%;
+	height: 90px;
+}
+.pagos{
+	width: 100%
+}
+.devpagos h6{
+	font-size: 15px;
+	font-weight: normal;
+   margin-top: 30px;
+}
+/*FOOTER NEGRO*/
+.footerblack{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-top:3px solid #ffbb33;
+	border-right: none;
+	border-left: none;
+	border-bottom: none;
+	background: black;
+}
+.emoji-descuent{
+	display: flex;
+	justify-content: center;
+	width: 75%;
+}
+.emojicenter{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	height: 100px;
+}
+.emojicenter div{
+	margin-top: 25px;
+    height: 50px;
+}
+
+.emojicenter img{
+	width: 60px;
+}
+.emojicenter  a{
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 30px;
+	color: #616161;
+}
+@media (max-width: 770px) {
+	.ctn-fomulario{
+	display: flex;
+	justify-content: center;
+    width: 100%;
+    height: 1019px;
+    background: #eeeeee;
+    border-top:1px solid #bdbdbd;
+    border-bottom:1px solid #bdbdbd;
+    border-right: none;
+    border-left: none;
+}
+	.ctn-form{
+	display: flex;
+	flex-direction: column;
+	width: 93%;
+	height: 190px;
+}
+.formulario ul ul{
+	width: 111%;
+	padding: 10px;
+}
+.formulario ul ul li{
+	padding: 10px;
+    margin-left: -10px;
+    border-top:1px solid #9e9e9e; 
+    width: 100%;
+}
+.formulario ul ul form input{
+	width: 65%;
+}
+
+/*STYLE MODO DE PAGOS*/
+.pagcredit{
+	display: flex;
+	justify-content:center;
+	height: 70px;
+    width: 100%;
+}
+.devpagos h6{
+	font-size: 13px;
+	font-weight: normal;
+    margin-top: 27px;
+}
+.pagos{
+    display: none;	
+}
+.emojicenter{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+}
+.emojicenter  a{
+	line-height: 30px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 23px;
+	color: #616161;
+}
+.emojicenter img{
+	width: 33px;
+}
+}
+@media (min-width: 771px) {
+
+	.ctn-fomulario{
+    height: 430px;
+}
+    .ctn-form{
+	display: flex;
+	justify-content: space-between;
+	width: 96%;
+}
+.ctn-cp{
+	width: 97%;
+}
+.devpagos{
+	width: 100%
+}
+.pagos{
+	width: 100%
+}
+.ctn-cp .pagos img{
+	margin-top: 13px;
+    width: 100%;
+}
+.emojicenter{
+	width: 100%;
+	height: 100px;
+}
+.emojicenter img{
+	width: 60px;
+}
+.emojicenter  a{
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 30px;
+	color: #616161;
+}
+}
+@media (min-width: 1070px) {
+	.ctn-fomulario{
+	display: flex;
+	justify-content: center;
+    width: 100%;
+    height: 300px;
+    background: #eeeeee;
+    border-top:1px solid #bdbdbd;
+    border-bottom:1px solid #bdbdbd;
+    border-right: none;
+    border-left: none;
+}
+	.ctn-form{
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+}
+.ctn-cp{
+	width: 95%;
+}
+.devpagos h6{
+	font-size: 13px;
+	font-weight: normal;
+    margin-top: 27px;
+}
+.emojicenter img{
+	width: 60px;
+}
+.emojicenter  a{
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 30px;
+	color: #616161;
+}
+}
+@media (min-width: 1414px) {
+	.ctn-form{
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+}
+    .ctn-cp{
+	width: 75%;
+}
+.emojicenter img{
+	width: 60px;
+}
+.emojicenter  a{
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 30px;
+	color: #616161;
+}
+}

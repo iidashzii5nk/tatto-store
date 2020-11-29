@@ -1,0 +1,349 @@
+@import url(stylerespons.css);
+@import url(styleslider.css);
+@import url(stylecirculos.css);
+@import url(stylepromo.css);
+@import url(stylecards.css);
+@import url(stylemasvendido);
+@import url(stylefooter.css);
+@import url(stylesesion.css);
+@import url(stylerecontra.css);
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.cont-prin{
+	width: 100%;
+	display: flex; 
+	justify-content: space-around;
+	justify-content: center;
+}
+.cont-prin .inisesion a:hover{
+	color:#e65100 ;
+}
+/******----Primer Div item1-----------------------------****/
+.ctn-1{/*Contenedor del logo*/
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+.ctn-2{/*Contenedor buscador*/
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+.srcp{
+	position: absolute;
+	margin-top: 34px;
+	font-size: 23px;
+	margin-left: -29px;
+}
+.ctn-3{/*Contenedor carrito*/
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	color: black;
+}
+.logo{/*Imagen del logo*/
+	margin-top: 20px;
+	width: 63%;
+	height: 70px;
+}
+.src-prin{
+	margin-top: 30px;
+	width: 30%;
+	height: 30px;
+}
+.ctn-car{
+	display: flex;
+	justify-content: flex-end;
+	width: 59%;
+	height: 100px;
+}
+.inisesion{
+	margin-top: -17px;
+	margin-left: 110px;
+	width: 60%;
+}
+.inisesion a{ 
+	font-size: 15px;
+	color: black;
+	font-family:monospace;
+}
+.inisesion a i{ 
+	font-size: 10px;
+}
+.carito{
+    line-height: 70px;
+    margin-left: 75px;
+    font-size: 21px;
+    color:#ffbb33;
+	background:black;
+	padding:1px;
+	width: 1%;
+}
+.car{
+	padding: 3px;
+	font-size: 16px;
+}
+.letra-carrito{/*Letra Carrito del contenedor negro*/
+}
+.vacio{
+	width: 100%;
+	padding: 1px;
+	color: black;
+	background:#ffbb33;
+}
+/************---Propiedades del input----***************/
+
+input.src{
+	padding: 9px 10px 9px 35px;
+	outline-color: #bdbdbd;
+	font-size: 9px;
+	color: #444;
+	border: 1.5px solid #bdbdbd;
+	background: #fff url("../imagenes/icon-search.png");
+	no-repeat 9px center;
+	width: 90%;
+	height: 15px;
+	transition: all .5s;
+}
+.src:focus{/*Hacemos un focus y le damos un efecto y color*/
+box-shadow: 0px 0px 7px #b3e5fc ;
+}
+
+/**********Barra Menu*************************/
+header{/*Contenedor del menu*/
+	width: 100%;
+	height: 53px;/*tamaño del menu altura*/
+	background: rgba(158, 158, 158, 0.9);/*Color de la barra de menu*/
+	color:black;
+	display: flex;
+	justify-content: center;
+	position: sticky;/*Posicion pegajoso*/
+	top: 0;
+	z-index: 102;
+}
+header label{/*Configuracion del icon-menu*/
+	display: none;/*Desaparece el icono*/
+	cursor: pointer;
+	margin-top: 7px;
+	position: absolute;
+	margin-left: 91%;
+}
+
+#btn-menu{/*Check box*/
+	display: none;
+}
+#modificado{
+	color: #ffbb33;
+	width: 100%;
+	height:52px;
+	background:#2E2E2E;
+}
+#modificado:hover{
+	color: black;
+	width: 100%;
+	height:52px;
+	background:rgba(255, 152, 0, 0.7);;
+}
+.icon-down-open{
+	position: absolute;
+	margin: 3px 1px;
+	font-size: 9px;
+}
+.icon-droplet{
+	position: absolute;
+	margin: -2px -20px;
+	font-size: 20px;
+}
+.icon-home{/*posición del icono*/
+	position: absolute;
+	margin-top: 1px;
+	margin-left: -7px;
+	background:none;
+}
+.icono-home{/*Medidas de <li>*/
+	margin-top:-3px;
+	padding: 3px;
+	width: 60px;
+	height: 52px;
+	background:rgba(255, 152, 0, 0.7) ;
+}
+.icon-certificate{
+	color: #ffff00;
+}
+.menu ul{/*Padres de los items <ul>*/
+	margin-top: 4px;
+    display: flex;
+    list-style: none;
+}
+.menu ul ul{/*Los submenu*/
+	background: #fafafa ;/*Color de los submenus*/
+	display: none;
+	font-size:50px;
+}
+.menu ul ul a{/*Los submenu*/
+	font-family: monospace;
+	font-weight: 549;
+	font-size: 20px;
+}
+.menu ul ul::before {/*Crear el triangulo de los submenus*/
+content: "";
+display: block;
+
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-bottom: 5px solid #fff;
+
+position: absolute;
+top: -5px;
+left: 55px;
+}
+.menu ul ul :hover a, .menu li a:focus {/*Quita el color de fondo de los 
+	submenu y pone un color a la letra al pasar el sursor*/
+	background: none;
+    color: #FF8800 ;
+}
+.menu a{/*La letra de los menus*/
+	display: block;
+	padding: 15px 20px;
+	color: black;
+	text-decoration: none;
+	font-size:20px; 
+	font-weight: 500;
+    font-family: serif;
+    height: 52px;
+    margin-top: -3px;
+}
+.menu a:hover{
+	background:rgba(255, 152, 0, 0.7) ;
+}
+.menu ul li:hover ul{/*Depelgar los submenus*/
+	z-index: 1;
+	top: 49px;
+	display: block;
+	position: absolute;
+	width: auto;
+    
+}
+#submenu{ /*Dar un padin solo a la letra del menu <a>INK</a>*/
+	padding: 10px 20px 50px;
+}
+
+#sub{ /*Dar un padin solo a la letra del menu <a>INK</a>*/
+	padding:15px 33px;
+   }
+
+@media (max-width:1410px) {
+	.cont-prin{
+		display: none;
+	}
+	header{
+		display: flex;
+		width: 100%;
+		background:black;
+		height:53px;
+		z-index: 20;
+	}
+     header label{/*Aparece el icono del menu*/
+		display: block;
+		color: #9e9e9e;
+		margin-top: 5px;
+		font-size: 30px;
+		left: -90%;
+	}
+	#sub{ /*Dar un padin solo a la letra del menu <a>INK</a>*/
+	padding:10px 18px;
+   }
+   #modificado{
+	color: #ffbb33;
+	width: 100%;
+	height:53px;
+	background:black;
+}
+	.icono-home{/*<li>*/
+		display: none;
+	}
+	.icon-deviantart{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-pinboard{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-off{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-paste{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-box{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-resize-vertical{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.icon-certificate{
+		position: absolute;
+	    margin: -2px -15px;
+	    font-size: 11px;
+	}
+	.menu{
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width:230px;
+		height: 900%;
+        overflow-y: auto;
+		transform: translateX(-100%);	
+		transition: all 0.1s;
+ 	}
+	.menu ul{
+		flex-direction: column;/*Esta propiedad ve en junta con el 
+		display flex ya que se puso antes del media query como 
+		display flex*/
+		background: black;
+     }
+     .menu a{
+     	font-size: 17px;
+     	color: #ffbb33;
+     	border: 1px solid #fafafa;
+        padding: 10px 20px;
+     }
+     .menu ul li ul{
+     	background: #4B515D;
+     	width: 230px;
+     }
+.menu ul li:hover ul{/*Los submenu*/
+	display: none;
+	position: static;/*Le quita la funcion al mismo .menu ul li:hover ul
+	fuera del query para que el menu empuje al otro y no quede encima*/
+	background: #4B515D;
+	width: 230px;
+}
+
+#btn-menu:checked ~ .menu{ /*Para sacar la virgulilla Alt + 126
+	Esto hace que al oprimir el cheked que esta vinculado con el menu*/
+transform: translateX(0%);
+	} 
+	 .icon-down-open{
+	 	position: absolute;
+	    right: 5px;
+		color: #9e9e9e;
+	}
+}

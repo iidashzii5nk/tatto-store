@@ -1,0 +1,162 @@
+.ctnautent{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 450px;
+}
+.ctnsbautent{
+	padding-top: 20px;
+	width: 73%;
+	height:430px;
+}
+.ctncreacnt{
+	width: 100%;
+	height:350px;
+}
+.homenu{
+	width: 100%;
+	height:37px;
+}
+.ctnsbcreacnt{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height:300px;
+}
+.cuenta{
+	width: 100%;
+	height: 300px;
+}
+.cuentaregis{
+	width: 49%;
+	height: 300px;
+	background: #eeeeee;
+	border:1px solid #9e9e9e;
+}
+.ctaregis{
+	width: 49%;
+	height: 300px;
+	background: #eeeeee;
+	border:1px solid #9e9e9e;
+}
+/*Icon home*/
+.homenu a i{
+	font-size: 12px;
+	color:#616161;
+}
+.homenu h6{
+	margin-left: 20px;
+	margin-top: -15px;
+	font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+	color: #616161;
+}
+.ctnsbautent .ctncreacnt h1{
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	padding-bottom: 10px;
+	color: #616161;
+	border-bottom: 1px solid #9e9e9e;
+}
+.ctncreacnt h3{
+   font-family: sans-serif;
+   font-weight: normal;
+   font-size: 15px;
+   padding: 10px 0px 10px 0px;
+   margin-left: 10px;
+   border-bottom: 1px solid #9e9e9e;
+   width: 97%;
+   color: #616161;
+}
+.ctncreacnt .forctn p{
+   font-family: sans-serif;
+   font-weight: normal;
+   padding:15px 0px 10px;
+   margin-left: 10px;
+   font-size: 14px;
+   color: #616161;
+}
+.ctncreacnt .forcorreo{
+	font-family: sans-serif;
+    font-weight: normal;
+	padding:10px 0px 20px;
+	font-size: 13px;
+    color: #616161;
+}
+.ctncreacnt .forcorreo label{
+   margin-left: 10px;
+}
+.ctncreacnt .forcorreo  input{
+   height: 30px;
+   width: 300px;
+   margin-top: 10px;
+   margin-left: 10px;
+   outline:none;
+   font-size: 15px;
+}
+.ctncreacnt .btnsubmit button{
+   border: none;
+   background:#00c853;
+   margin-left: 10px;
+   height: 30px;
+   cursor: pointer;
+}
+.ctncreacnt .btnsubmit span{
+	padding: 15px 12px 15px 7px;
+    color :white;
+    font-size: 13px;
+}
+.ctncreacnt .btnsubmit span .iuser{
+	padding: 7px 7px 7px 4px;
+    color :white;
+    font-size: 13px;
+}
+.ctncreacnt .btnsubmit span .lok{
+	padding: 7px 7px 7px 4px;
+    color :white;
+    font-size: 13px;
+}
+.ctncreacnt p{
+	margin-left: 10px;
+}
+.ctncreacnt .ctaregis p a{
+    color:#757575;
+}
+.ctncreacnt .ctaregis p a:hover{
+	text-decoration: none;
+    color: #e65100 ;
+}
+@media (max-width: 770px) {
+.ctnautent{
+	width: 100%;
+	height: 800px;
+}
+.ctnsbautent{
+	width: 95%;
+}
+.ctnsbcreacnt{
+	flex-wrap: wrap;
+}
+.cuentaregis{
+	width: 100%;
+}
+.ctnsbcreacnt .ctaregis{
+	margin-top: 40px;
+	height: 310px;
+	width: 100%;
+}
+}
+@media (min-width: 771px) {
+.ctnsbautent{
+	width: 95%;
+}
+
+}
+@media (min-width: 1414px) {
+.ctnsbautent{
+width: 73%;
+	}
+}

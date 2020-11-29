@@ -1,0 +1,59 @@
+.promociones{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.promociones-1{
+	display: flex;
+	padding: 6px;
+	margin-top: 40px;
+	width: 73%;
+    background: #ffbb33;
+}
+.ltr-promo{
+	padding: 5px;
+	font-size: 19px;
+	font-weight: normal;
+	font-family: sans-serif;
+}
+.on-sale{
+	font-family: sans-serif;
+	padding: 6px;
+	text-align: center;
+	margin-left: 10px;
+	width: 65px;
+	height: 22px;
+	font-size: 11px;
+	background: red;
+	color: white;
+	margin-top: 5px;
+}
+/*Media query de los rectangulos amarillos*/
+@media (max-width:770px) {
+.promociones-1{
+	display: flex;
+	padding: 6px;
+	margin-top: 40px;
+	width: 95%;
+    background: #ffbb33;
+}
+}
+
+@media (min-width: 771px) {
+	.promociones-1{
+	display: flex;
+	padding: 6px;
+	margin-top: 40px;
+	width: 95%;
+    background: #ffbb33;
+}
+}
+@media (min-width: 1414px) {
+	.promociones-1{
+	display: flex;
+	padding: 6px;
+	margin-top: 40px;
+	width: 74%;
+    background: #ffbb33;
+}
+}
