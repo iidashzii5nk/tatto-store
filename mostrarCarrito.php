@@ -1,13 +1,27 @@
+<?php
+include 'global/config.php';
+include 'carrito.php';
+?>
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flex-Box</title>
+	<title>3BPTATTOO</title>
 	<link rel="stylesheet" type="text/css" href="css/iconos-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/styleflex.css">
+	<!--Link de Boostrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!--Scripts para la funcionalidad de boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <!--Scripts para la funcionalidad de boostrap-->
 
 
 	<script src="https://kit.fontawesome.com/def3cb64a1.js" crossorigin="anonymous"></script><!--FotAwesome-->
@@ -23,13 +37,9 @@
 
 
 
-	<!--Script del carouse comecio-->
-	<script src="http://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <!--Script del carouse comecio-->
 </head>
 <body>
+
 <!--************************************************************-->	
 <!------------Contenedor Logo-------------------------------------->
 <div class="cont-prin">
@@ -41,12 +51,16 @@
  	<div class="ctn-car">
  <div class="ctncarc">
  	<span class="carito">
+ 		<a href="mostrarCarrito.php">
  		<i class="car fas fa-shopping-cart"></i>
  		CARRITO
- 		<span class="vacio">Vacío</span>
+ 		<span class="vacio">(<?php echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
+
+ 		?>)</span>
+ 	</a>
  	</span>	
  	<div class="inisesion">
- 	<a href="">
+ 	<a href="iniciosesion.html">
  		<i class="fas fa-arrow-right"></i>
  		Iniciar sesión
  	</a>
@@ -83,7 +97,7 @@
 <nav class="menu">
 
    		<ul>
-   			<li class="icono-home"><a href="#"><span class="icon-home"></span></a></li>
+   			<li class="icono-home"><a href="index.php"><span class="icon-home"></span></a></li>
    	    <li class="submenu"><a id="sub" href="#"><span class="icon-droplet"></span>INK<span class="icon-down-open"></span></a>
         <ul>
         <li><a href="#">INTENZE INK</a></li>
@@ -130,50 +144,64 @@
 
 <script src="js/menu_respons.js"></script>
 
-<div class="autent">
-	<div class="sbautent">
-		<div class="homen">
-			<a href="index.html">
-				<i class="fas fa-home"></i>
-			</a>
-			<div class="aut">
-				<a href="iniciosesion.html">
-           <h6> > Autenticación </h6>
-           </a>
-           <h5> > Ha olvidado su contraseña</h5>
-           </div>
+<!--Desdes aca empieza el mostrar carrito lo de arriba es del menu-->
+<div class="container">
+<br>
+<?php if (!empty($_SESSION['CARRITO'])) { ?>
+<table class="table table-light table-bordered">
 
-		</div>
-		<div class="creacuent">
-			<h1>Autenticación</h1>
-				<div class="sbcreacnt">
-					<div class="cntaregis">
-						<form action="iniciosesion_submit" method="post">
-							<h3>¿OLVIDASTE TU CONTRASEÑA?</h3>
-							<div class="ctnformu">
-								<p>Por favor introduzca la direccion de email que utilizo
-								para registrarse y le enviaremos su nueva contraseña.</p>
-							</div>
-							<div class="formail">
-								<label>Correo electrónico</label><br>
-								<input type="email" name="" value="">
-							</div>
-							<div class="btnsubmi">
-								<input type="hidden">
-								<button type="submit">
-									<span>
-										RECUPERAR
-										<i class="flecha fas fa-angle-double-right"></i>
-									</span>
-								</button>
-							</div>
-						</form>
-					</div>
-						
-				</div>
-			</div>
-	</div>
+	<tbody>
+		<tr>
+			<th width="40%">Descripción</th>
+			<th width="15%" class="text-center">Cantidad</th>
+			<th width="20%" class="text-center">Precio</th>
+			<th width="20%" class="text-center">Total</th>
+			<th width="5%">--</th>
+		</tr>
+		<?php $total=0; ?>
+		<?php foreach ($_SESSION['CARRITO'] as $indice=>$producto) {?>
+		<tr>
+			<td width="40%"><?php echo $producto['NOMBRE']?></td>
+			<td width="15%" class="text-center"><?php echo $producto['CANTIDAD']?></td>
+			<td width="20%" class="text-center"><?php echo $producto['PRECIO']?></td>
+			<td width="20%" class="text-center"><?php echo number_format($producto['PRECIO']*$producto['CANTIDAD'],2); ?></td>
+			<td width="5%"> 
+
+
+            <form action="" method="post">
+ 
+            <input 
+            type="hidden"
+            name="id"
+            id="id" 
+            value="<?php echo  openssl_encrypt($producto['ID'],COD,KEY);?>">
+
+				<button 
+				class="btn btn-danger"
+				type="submit"
+				name="btnAccion" 
+				value="Eliminar" 
+				>Eliminar</button>
+			</form>
+			</td>
+		</tr>
+		<?php $total=$total+($producto['PRECIO']*$producto['CANTIDAD']); ?>
+		<?php }?>
+		<tr>
+			<td colspan="3" align="right"><h3>Total</h3></td>
+			<td align="right"><h3>$<?php echo number_format($total,2);?></h3></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
 </div>
+<?php }else{?>
+	<div class="alert alert-success">
+		No hay productos en el carrito....
+	</div>
+
+<?php } ?> 
+
 
 <div class="ctn-fomulario">
 	
